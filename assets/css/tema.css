@@ -1,0 +1,11 @@
+*{
+    background-color: rgb(193, 197, 249);
+}
+
+h1{
+    color:rgb(32, 34, 88)
+}
+
+h1:hover{
+    color:salmon;
+}
