@@ -1,0 +1,15 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Ola mundo cruel
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+jobs:
+  # Single deploy job since we're just deploying
+  saudacao:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ola mundo cruel
+        run: echo "Ola mundo cruel"
