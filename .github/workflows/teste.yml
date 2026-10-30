@@ -1,0 +1,25 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: testes automatizados
+
+on:
+  # Runs on pushes targeting the default branch
+  pull_request:
+    types: ["opened", "synchronize", "reopened"]
+
+jobs:
+  jest:
+    name: jest
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: configure o nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: instalar dependencias
+        run: npm ci
+
+      - name: rodar testes
+        run: npx jest  --ci
